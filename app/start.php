@@ -10,9 +10,5 @@ $config['baseUrl'] = 'http://localhost:8000';
 
 $app = new App(["settings" => $config]);
 
-
-$app->get('/', function ($req, $res) {
-    $res->getBody()->write("Hello");
-
-    return $res;
-});
+require 'database.php';
+require 'routes.php';
